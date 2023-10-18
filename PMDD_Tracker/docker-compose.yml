@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python-pmdd-tracker:
+    build: .
+    command: bash -c "python PMDD_Project/Code/manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./PMDD_Project:/PMDD_Project
