@@ -8,8 +8,8 @@ docker-build .
 docker-compose run django bash
 python manage.py migrate
 python manage.py createsuperuser
-# High level installation from a container using docker and django. 
 '''
+# High level installation from a container using docker and django. 
 
 ## Getting Started
 To run my PMDD Mood Tracker App follow the instructions below
@@ -40,3 +40,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+## User Stories
+As a **parent**, I want to **be able to see my families calendar at a quick glance** so I can **help them through the day**.
+As a **friend**, I want to **be able to see my friends shared notes** so I can **be there for them more**.
+As a **woman**, I want to **be able to notate my moods in an easy way via pictures** so I can **documtent my moods quickly and efficiently**.
+As a **user**, I want to **be able to see if I have PMDD with a quick test** so I can **understand myself better**.
+
+## Mis-use Stories
+As a **malicious user**, I want to **be able to see other users notes** so I can **use their informaiton in a malicious way**.
+Mitigation criteria user login required to see data with least privilege enfored
+As a **malicious user**, I want to **be able to insert false informaiton or alter users tracking** so I can **get them to click on a malicious link**.
+Mitigation criteria Input validation required in all fields
+As a **abuser**, I want to **be able to see peoples patterns** so I can **use it against them or gaslight them**.
+Mitigation criteria Least privileged enfored. Cannot see others data without it being shared with you
+As a **scammer**, I want to **be able to see peoples patterns** so I can **try to get them to buy a fake product for their specific PMDD symptoms**.
+Mitigation criteria user login required to see data with least privilege enfored
