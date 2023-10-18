@@ -1,6 +1,6 @@
 # CYBR8470_Project PMDD Mood Tracker App
 # The executive summary
-This application is a mood tracker for women who suffer from PMDD. This application will help users track their moods and emotions so that they can better predict the outcome of the day and understand themselves better. In paticular, this app will ask what the users mood is, rate  
+This application is a mood tracker for women who suffer from PMDD. This application will help users track their moods and emotions so that they can better predict the outcome of the day and understand themselves better. In paticular, this app will ask what the users mood is, rate anger, sadness, loneliness, and happiness. This app will have a calendar that is color coded or setup in a way to show moods, anger levels, sadness levels, lonleiness levels, happiness levels, and period cycles at a glance. When clicking on a certain date in the calendar, this app will show the details of the mood on that date and any additional comments. This app will have a emotion selection with faces (hopefully) to display emotions while automatically setting the date for when the emotion was selected. Once the emotion was selected, a set of questions will be asked to rank emotions and a comment section. Based on the response, the calendar will be colored accordingly. User data will be tied to logins or user selector at the very beginning. People with PMDD suffer from extreme mood swing that can (usually) be predicted as long as proper tracking is in place and period cycles are considered "normal". This app will assist with that and help prepare and predict for any possible bad mood swing days to help the person and everyone around the person with PMDD. 
 
 ## Installation
 '''bash
@@ -8,6 +8,7 @@ docker-build .
 docker-compose run django bash
 python manage.py migrate
 python manage.py createsuperuser
+# High level installation from a container using docker and django. 
 '''
 
 ## Getting Started
@@ -15,7 +16,7 @@ To run my PMDD Mood Tracker App follow the instructions below
 '''bash
 docker-compose up
 '''
-See in-app menus for help with using specific features
+#There will be in-app menus or help buttons for help with using specific features
 
 ## License
 MIT License
