@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from  Tracker import views
+from Tracker.views import HomePage
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name="index"),
+    path('HomePage', HomePage.as_view())
 
 ]

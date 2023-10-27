@@ -10,7 +10,8 @@ from rest_framework import status
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.template import loader
+from django.views.generic.base import View
 
-def Tracker(request):
-  template = loader.get_template('index.html')
-  return HttpResponse(template.render())
+class HomePage(View):
+  def get (self, request):
+    return render(request, 'index.html')
