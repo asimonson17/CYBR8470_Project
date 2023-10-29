@@ -1,9 +1,62 @@
 <!DOCTYPE html>
+<html lang="en">
     <!-- Add additional CSS in static file -->
-    {% load static %}
+    <!-- Commenting out for testing - this is Django code
+      {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    -->
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<div class="month">
+  <div class="sidebar">
+    <a class="active" href="calendar.html">Tracking Calendar</a>
+    <a href="index.html">Home</a>
+    <a href="#links">Links</a>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="days">
+        
+      </div>
+    </div>
+   </div> 
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!--  <div class="content">
+    </div>
+ Testing Code
+  <div class="month">
   <ul>
     <li class="prev">&#10094;</li>
     <li class="next">&#10095;</li>
@@ -31,7 +84,7 @@
   <li>7</li>
   <li>8</li>
   <li>9</li>
-  <li><span class="active">10</span></li>
+  <li>10</li>
   <li>11</li>
   <li>12</li>
   <li>13</li>
@@ -42,8 +95,7 @@
   <li>18</li>
   <li>19</li>
   <li>20</li>
-  <li><span class="active">20</span></li>
-    <li>21</li>
+  <li>21</li>
   <li>22</li>
   <li>23</li>
   <li>24</li>
@@ -53,6 +105,6 @@
   <li>28</li>
   <li>29</li>
   <li>30</li>
-  <li><span class="active">30</span></li>
+  <li>31</li>
 </ul>
-</body>
+-->
