@@ -7,21 +7,92 @@
 
 html{
   font-size: 62.5%;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.content {
+  margin-left: 200px;
+  height: 100vh;
+  background-color: #535761;
 }
 
 .container {
   width: 100%;
-  height: 100vh;
-  background-color: #12121f;
+  height: 50%;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  background-color: #555;
+  position: fixed;
+  top: 0;
   color: #eee;
   display: flex;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+
+}
+
+.notes {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+
+}
+
+.notes h1 {
+  text-align: center;
+  font-weight: 400;
+  text-align: center;
+  color: #1b1b1b;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.notes p {
+  color: #1b1b1b;
+}
+
+.overview {
+  position: fixed;
+  bottom: 0px;
+  padding: 20px;
+  width: 100%;
+  height: 50%;
+
+  background-color: #ffffff;
+  color:#222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+
+}
+
+.overview h1 {
   justify-content: center;
-  align-items: center;
+  display: flex;
+  font-weight: 400;
+  text-align: center;
+  color: #222227;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.entry {
+  position: absolute;
+  right: 0;
+  color: #262626;
 }
 
 .calendar {
-  width: 45rem;
-  height: 52rem;
+  width: 100%;
+  height: 100%;
   background-color: #222227;
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
@@ -29,7 +100,7 @@ html{
 .month {
   width: 100%;
   height: 12rem;
-  background-color: #167e56;
+  background-color: #2a89a1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +138,7 @@ html{
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  width: calc(100% / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,8 +154,7 @@ html{
 
 .days div {
   font-size: 1.4rem;
-  margin: 0.3rem;
-  width: calc(40.2rem / 7);
+  width: calc(100% / 7);
   height: 5rem;
   display: flex;
   justify-content: center;
@@ -114,7 +184,7 @@ html{
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #f1f1f1;
+  background-color:#555;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -123,7 +193,7 @@ html{
 /* Sidebar links */
 .sidebar a {
   display: block;
-  color: black;
+  color: white;
   padding: 16px;
   text-decoration: none;
   font-size: 125%;
@@ -131,7 +201,7 @@ html{
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #04aa6d;
+  background-color: #447480;
   color: white;
 }
 
@@ -141,12 +211,7 @@ html{
   color: white;
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
+
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
@@ -172,6 +237,7 @@ div.content {
 }
 
 
+
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/  */
   
 :focus,
@@ -183,12 +249,38 @@ div.content {
 }
 
 .topnav {
-  float: left;
-  color: #f2f2f2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #9b3535;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.icon-bar {
+  width: 100vh; /* Full-width */
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 2px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 1.5vw; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active {
+  background-color: #04AA6D; /* Add an active/current color */
 }
 
 /* CSS Styling for Tracking Calendar

@@ -14,14 +14,19 @@
 <!--    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  
   <div class="sidebar">
     <a class="active" href="calendar.html">Tracking Calendar</a>
     <a href="index.html">Home</a>
+    <a href="#addentry">Add Entry</a>
     <a href="#links">Links</a>
   </div>
+
   <div class="content">
+    
     <div class="container">
       <div class="calendar">
         <div class="month">
@@ -41,12 +46,31 @@
         <div>Fri</div>
         <div>Sat</div>
       </div>
-      <div class="days">
-        
+      <div class="days"> 
       </div>
+    </div> <!--This is the end of the calendar wrapper-->
+
+    <div class="notes">
+      <h1>My Notes</h1>
+      <p>My Notes go here</p>
+     </div> 
+     <div class="overview">
+      <h1>Overview</h1>
+      <p>Monthly Overview will go here</p>
+     </div>
+
+   </div> <!--This is the end of the container wrapper-->
+   <div class="entry">
+    <div class="icon-bar">
+      <a class="active" href="#"><i class="fa fa-home"></i></a>
+      <a href="#"><i class="fa fa-search"></i></a>
+      <a href="#"><i class="fa fa-user-circle"></i></a>
+      <a href="#"><i class="fa fa-question-circle-o"></i></a>
+      <a href="#"><i class="fa fa-pencil-square-o"></i></a>
     </div>
-   </div> 
+  </div> <!-- this is the end of the contents wrapper-->
   </div>
+  
 <script src="script.js"></script>
 </body>
 </html>
