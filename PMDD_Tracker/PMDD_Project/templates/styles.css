@@ -11,10 +11,36 @@ html{
   height: 100%;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-image: url("AlexDrawingSmall.jpg");
+
+}
+
+.header h1 {
+
+  padding-top: 10px;
+  justify-content: center;
+  display: flex;
+  font-weight: 400;
+  text-align: center;
+  margin-left: -200px;
+  color: #222227;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+
+}
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 .content {
   margin-left: 200px;
+  margin-top: 100px;
   height: 100vh;
   background-color: #ffffff;
 }
@@ -22,7 +48,7 @@ html{
 .container {
   width: 100vw;
   height: 50%;
-
+  margin-top: 100px;
   padding-bottom: 0px;
   padding-right: 0px;
   background-color: #555;
@@ -50,6 +76,7 @@ html{
   padding-top: 50px;
   font-weight: 400;
   text-align: center;
+  margin-left: -200px;
   color: #1b1b1b;
   font-size: 4rem;
   font-weight: 400;
@@ -79,6 +106,7 @@ html{
   display: flex;
   font-weight: 400;
   text-align: center;
+  margin-left: -200px;
   color: #222227;
   font-size: 4rem;
   font-weight: 400;
@@ -180,7 +208,7 @@ html{
 
 /* The side navigation menu */
 .sidebar {
-  margin: 0;
+  margin-top: 0px;
   padding: 0;
   width: 200px;
   background-color:#555;
@@ -304,7 +332,7 @@ html{
 .form {
   /* Center the form on the page */
   margin: 0 auto;
-  width: 800px;
+  width: 400px;
   /* Form outline */
   padding: 1em;
   border: 1px solid #ccc;
@@ -325,7 +353,7 @@ html{
 .form label {
   /* Uniform size & alignment */
   display: inline-block;
-  width: 100vw;
+  width: 90px;
   text-align: center;
 }
 
@@ -349,7 +377,7 @@ html{
   border-color: #000;
 }
 
-.form textarea {
+.formtextarea {
   /* Align multiline text fields with their labels */
   vertical-align: top;
 
@@ -462,31 +490,3 @@ body {font-family: Verdana, sans-serif;}
   font-size: 17px;
 }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
