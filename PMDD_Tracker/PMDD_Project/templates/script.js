@@ -8,15 +8,19 @@ const renderCalendar = () => {
     
 //    const month = date.getMonth();
     
-    
+//get the last day of the month    
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-    
+
+//get the last day of the previous month for backfilling calendar
     const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-    
+
+//get the first day of the month for an index
     const firstDayIndex = date.getDay();
-    
+
+//get the last day ofthe month for an index
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-    
+
+//use last day index to get the next days needed for the calendar
     const nextDays = 7 - lastDayIndex - 1;
     
     const months = [
@@ -34,16 +38,18 @@ const renderCalendar = () => {
         "December",
     ];
     
+    //get current month and put it in the dates h1 variable
     document.querySelector('.date h1').innerHTML = months[date.getMonth()];
     
+    //get the current date and place it in the dates p variable
     document.querySelector('.date p').innerHTML = new Date().toDateString();
     
     let days = "";
     
+    //Calculate first days using prevlast day - firstday index and adding one
     for(let x = firstDayIndex; x > 0; x--) {
       days += `<div class="prev-date">${prevLastDay - x + 1} </div>`;  
     }
-    
     
     for(let i = 1; i <= lastDay; i++) {
         if(i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
@@ -59,11 +65,13 @@ const renderCalendar = () => {
 }
 
 
+//make the left arrow button on calendar go to previous month when clicked.
 document.querySelector('.prev').addEventListener('click', () => {
     date.setMonth(date.getMonth() - 1);
     renderCalendar();
 });
 
+//make right arrow button on calendar go to next month when clicked.
 document.querySelector('.next').addEventListener('click', () => {
     date.setMonth(date.getMonth() + 1);    
     renderCalendar();
