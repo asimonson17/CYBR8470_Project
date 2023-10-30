@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+  </script>
     <!-- Add additional CSS in static file -->
     <!-- Commenting out for testing - this is Django code
       {% load static %}
@@ -17,6 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  
 <!-- moving this around for testing, this is original spot for sidebar
   <div class="sidebar">
     <a class="active" href="calendar.html">Tracking Calendar</a>
@@ -63,6 +66,7 @@
      <div class="overview">
       <h1>Overview</h1>
       <p>Monthly Overview will go here</p>
+      <canvas id="myChart" style="width:100%;max-height:80%"></canvas>
      </div>
      <div class="icon-bar">
       <a class="active" href="#"><i class="fa fa-home"></i></a>
@@ -143,5 +147,6 @@
 
   </div> <!-- this is the end of the content wrapper-->
 <script src="script.js"></script>
+
 </body>
 </html>
