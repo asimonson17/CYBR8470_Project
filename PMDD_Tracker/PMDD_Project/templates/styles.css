@@ -61,7 +61,7 @@ html{
 
 .notes {
 
-  height: 100vh;
+  height: 80%;
   width: 100%;
   margin-top: 50px;
   padding: 20px;
@@ -69,6 +69,12 @@ html{
   background-color: #ffffff;
 
 
+}
+
+.notescontainer {
+  display:flex;
+  overflow: auto;
+  height: 80%;
 }
 
 .notes h1 {
@@ -505,6 +511,7 @@ body {font-family: Verdana, sans-serif;}
   text-transform: uppercase;
   border: 1px solid gray;
   transition: 0.3s;
+  width: 50%;
 }
 
 /* size of emoji & style */
@@ -523,6 +530,9 @@ body {font-family: Verdana, sans-serif;}
   padding: 5px;
 }
 
+.cardcontainer p {
+  text-align: center;
+}
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -532,4 +542,56 @@ body {font-family: Verdana, sans-serif;}
 /* Add some padding inside the card container */
 .cardcontainer {
   padding: 2px 16px;
+}
+
+.cardright {
+  /* Add shadows to create the "card" effect */
+  display: flex;
+  flex: 50%;
+  text-transform: uppercase;
+  border: 1px solid gray;
+  transition: 0.3s;
+  width: 50%;
+}
+
+/* size of emoji & style */
+.card h2 {
+  padding: 10px;
+  text-align: left;
+  font-weight: 400;
+  text-align: center;
+  color: #1b1b1b;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnleft {
+  float: left;
+  width: 50%;
+  padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.rowleft:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnright {
+  float: right;
+  width: 50%;
+  padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.rowright::after {
+  content: "";
+  display: table;
+  clear: both;
 }
