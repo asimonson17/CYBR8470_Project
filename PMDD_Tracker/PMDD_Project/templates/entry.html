@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entry</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--Commenting out for testing
+        {% load static %}
+    <link rel="stylesheet" href="{% static '../PMDD_Tracker_static/css/styles.css' %}" /> 
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <a class="active" href="calendar.html">Tracking Calendar</a>
-        <a href="index.html">Home</a>
-        <a href="entry.html">Add Entry</a>
-        <a href="#links">Links</a>
-      </div>
-      <div class="content">  
+    <div class="content">
+        <div class="header">
+          <h1>PMDD Tracker</h1>
+        </div>  
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="calendar.html">Tracking Calendar</a>
+            <a class="active" href="entry.html">Add Entry</a> 
+            <a href="#links">Links</a>
+        </div>
+        <div class="icon-bar">
+            <a href="index.html"><i class="fa fa-home"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-user-circle"></i></a>
+            <a href="#"><i class="fa fa-question-circle-o"></i></a>
+            <a href="entry.html"><i class="fa fa-pencil-square-o"></i></a>
+          </div>
+  <!-- Commenting out for testing
+    <a href="{% url 'trackingcalenar' %}">Tracking Calendar</a>
+-->
+      <div class="container">  
         <div class="moodtracker">
             <h1>My Mood Today</h1>
-        </div>
         <div class="form">
             
         <form>
+            
             <ul>
                 <li>
                     <label for="fname">First name:</label>
@@ -48,5 +69,6 @@
         </ul>
         </form>
     </div>
+</div>
     </div>
 </body>

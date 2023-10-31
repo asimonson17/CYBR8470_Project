@@ -1,65 +1,85 @@
 <!DOCTYPE html>
-    <!-- Add additional CSS in static file -->
     <!--Commenting out for testing
         {% load static %}
     <link rel="stylesheet" href="{% static '../PMDD_Tracker_static/css/styles.css' %}" /> 
 -->
-    <link rel="stylesheet" href="homestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="homestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
-    <div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="#whatispmdd">What is PMDD?</a>
-  <a href="#doihaveit">Do I have it?</a>
+    <div class="container">
+        <div class="header">
+          <h1>PMDD Tracker</h1>
+        </div>  
+        <div class="sidebar">
+            <a class="active" href="#home">Home</a>
+            <a href="#whatispmdd">What is PMDD?</a>
+            <a href="#doihaveit">Do I have it?</a>
+            <a href="calendar.html">Tracking Calendar</a>
+            <a href="#actionstotake">Actions to Take</a>
+            <a href="#symptons">Symptoms</a>
+            <a href="#links">Links</a>
+            <a href="#howcanihelp">How Can I Help?</a>
+        </div>
+        <div class="icon-bar">
+            <a class="active" href="index.html"><i class="fa fa-home"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="#"><i class="fa fa-user-circle"></i></a>
+            <a href="#"><i class="fa fa-question-circle-o"></i></a>
+            <a href="entry.html"><i class="fa fa-pencil-square-o"></i></a>
+          </div>
   <!-- Commenting out for testing
     <a href="{% url 'trackingcalenar' %}">Tracking Calendar</a>
 -->
-  <a href="calendar.html">Tracking Calendar</a>
-  <a href="#actionstotake">Actions to Take</a>
-  <a href="#symptons">Symptoms</a>
-  <a href="#links">Links</a>
-  <a href="#howcanihelp">How Can I Help?</a>
-</div>
-<div class="content">
-    <div class="whatispmdd">
-    <h1 id="whatispmdd">What is PMDD?</h1>
-    <p>Premenstrual Dysphoric Disorder (PMDD) is a more severe form of Premenstrual Syndrome (PMS) that can cause many side effects.
-        The cause of PMDD is unknown. They believe it to be an abnormal reaction to hormonal changes during the menstrual cycle. More information about PMDD can be found at <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd" target="_blank" rel="noopener noreferrer">hopkinsmedicine.org</a>.</p>
-    </div>
+        <div class="content">
+
+            <div class="whatispmdd">
+                <h1 id="whatispmdd">What is PMDD?</h1>
+                <p>Premenstrual Dysphoric Disorder (PMDD) is a more severe form of Premenstrual Syndrome (PMS) that can cause many side effects.
+                The cause of PMDD is unknown. They believe it to be an abnormal reaction to hormonal changes during the menstrual cycle. More information about PMDD can be found at <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd" target="_blank" rel="noopener noreferrer">hopkinsmedicine.org</a>.</p>
+            </div>
         <h1 id="doihaveit">Do I Have It?</h1>
-<p>Finding out if you or a loved on has PMDD can be a significant step in the right direction towards feeling better. There are treatments available for PMDD if diagnosed. Take the test <a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">here</a>.</p>
-<h1 id="trackingcalendar">Tracking Calendar</h1>
-<p>With our tracking calendar you can keep track of your moods and patterns to better understand and predict how the day is going to go. Use this <a href="">feature</a> to go to the tracking calendar.</p>
-<h1 id="actionstotake">Actions to Take</h1>
-<p>I took the <a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">test</a> and found out I have it, now what do I do? Speak to your doctor on actions to take and possible treatment plans.</p>
-<h1 id="symptoms"> Symptoms</h1>
-<h4>What are the symptoms for PMDD?</h4>
-<p>PMDD can show up differently in every woman. There are numerous symptoms, usually showing up within a week before or after your menstrual cycle. Some of these symptoms include:</p>
-<ul>
-    <li>Irritability</li>
-    <li>Anger</li>
-    <li>Depression</li>
-    <li>Anxiety</li>
-    <li>Lack of control</li>
-    <li>Nausea</li>
-    <li>Acne</li>
-    <li>Headaches</li>
-</ul>
-<h4 >Treatments for PMDD</h4>
-<p>There are many treatments for PMDD, including:</p>
-<ul>
-    <li>Exercise</li>
-    <li>Selective serotonin reuptake inhibitors (SSRI)</li>
-    <li>Birth control pills</li>
-    <li>Changes in diet</li>
-    <li>Stress management</li>
-</ul>
-<h1 id="links">Helpful Links</h1>
-<ul>
-<li><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd" target="_blank" rel="noopener noreferrer">hopkinsmedicine.org</a></li>
-<li><a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">PMDD Self Screen Test</a></li>
-<li><a href="https://www.med.upenn.edu/womenswellness/pmdd_studies.html" target="_blank" rel="noopener noreferrer">PMDD Research Study</a></li>
-</ul>
-</div>
+        <p>Finding out if you or a loved on has PMDD can be a significant step in the right direction towards feeling better. There are treatments available for PMDD if diagnosed. Take the test <a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        <h1 id="trackingcalendar">Tracking Calendar</h1>
+        <p>With our tracking calendar you can keep track of your moods and patterns to better understand and predict how the day is going to go. Use this <a href="">feature</a> to go to the tracking calendar.</p>
+        <h1 id="actionstotake">Actions to Take</h1>
+        <p>I took the <a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">test</a> and found out I have it, now what do I do? Speak to your doctor on actions to take and possible treatment plans.</p>
+        <h1 id="symptoms"> Symptoms</h1>
+        <h4>What are the symptoms for PMDD?</h4>
+        <p>PMDD can show up differently in every woman. There are numerous symptoms, usually showing up within a week before or after your menstrual cycle. Some of these symptoms include:</p>
+        <ul>
+            <li>Irritability</li>
+            <li>Anger</li>
+            <li>Depression</li>
+            <li>Anxiety</li>
+            <li>Lack of control</li>
+            <li>Nausea</li>
+            <li>Acne</li>
+            <li>Headaches</li>
+        </ul>
+        <h4 >Treatments for PMDD</h4>
+        <p>There are many treatments for PMDD, including:</p>
+        <ul>
+            <li>Exercise</li>
+            <li>Selective serotonin reuptake inhibitors (SSRI)</li>
+            <li>Birth control pills</li>
+            <li>Changes in diet</li>
+            <li>Stress management</li>
+        </ul>
+        <h1 id="links">Helpful Links</h1>
+        <ul>
+            <li><a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/premenstrual-dysphoric-disorder-pmdd" target="_blank" rel="noopener noreferrer">hopkinsmedicine.org</a></li>
+            <li><a href="https://iapmd.org/self-screen" target="_blank" rel="noopener noreferrer">PMDD Self Screen Test</a></li>
+            <li><a href="https://www.med.upenn.edu/womenswellness/pmdd_studies.html" target="_blank" rel="noopener noreferrer">PMDD Research Study</a></li>
+        </ul>
+        </div>
+    </div>
 </body>

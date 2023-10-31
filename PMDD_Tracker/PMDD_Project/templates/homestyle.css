@@ -1,24 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
 
+html{
+  font-size: 62.5%;
+  min-height: 100% !important;
+  height: 100%;
+}
+
+.header {
+
+  height: 100px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  /* background-image: url("AlexDrawingSmall.jpg"); */
+
+}
+
+.header h1 {
+
+  padding-top: 10px;
+  justify-content: center;
+  display: flex;
+  font-weight: 400;
+  text-align: center;
+  color: #222227;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.container {
+  /*  margin-left: 200px; */
+    margin-top: 100px;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .content {
+    margin-left: 200px;
+    width: 90%;
+    height: 100%;
+    margin-top: 160px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    color: #222227; 
+  }
+
+.content h1 {
+  font-size: 30px;
+}
+
+.content p {
+  font-size: 20px;
+}
 /* The side navigation menu */
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+  margin-top: 0px;
+  padding: 0;
+  width: 200px;
+  margin-top: 50px;
+  background-color:#555;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  overflow: auto;
   }
 
 
   /* Sidebar links */
   .sidebar a {
     display: block;
-    color: black;
+    color: white;
     padding: 16px;
     text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-
+    font-size: 125%;
   }
   
   /* Active/current link */
@@ -41,9 +106,7 @@
     font-family: 'Quicksand', sans-serif;
   }
   
-  .whatispmdd h1 {
-    background-color: #2a89a1;
-  }
+
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
   @media screen and (max-width: 700px) {
     .sidebar {
@@ -86,3 +149,56 @@
     text-decoration: none;
     font-size: 17px;
   }
+
+  
+.icon-bar {
+  position: fixed;
+  left: 0;
+  color: #262626;
+  width: 100%; /* Full-width */
+  height: 50px;
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 2px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  height: 50px;
+  font-size: 1.4vw; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.icon-bar a.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .icon-bar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .icon-bar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .icon-bar a {
+    text-align: center;
+    float: none;
+  }
+}
