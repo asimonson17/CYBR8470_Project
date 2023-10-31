@@ -62,10 +62,18 @@ Mitigation criteria user login required to see data with least privilege enfored
 
 Here's our logo (hover to see the title text):
 
-Inline-style: 
+Homepage: 
 ![alt text](PMDD_Tracker/Images/HomePageSketch.jpg "Homepage")
+Tracking Calendar:
+![alt text](PMDD_Tracker/Images/TrackingCalendarSketch.jpg "Tracking Calendar")
+Calendar Overview:
+![alt text](PMDD_Tracker/Images/CalendarViewSketch.jpg "Calendar Overview")
+Add Entry Page:
+![alt text](PMDD_Tracker/Images/AddEntrySketch.jpg "Add Entry")
+Login Page:
+![alt text](PMDD_Tracker/Images/LoginPageSketch.jpg "Login Page")
 
-Reference-style: 
-![alt text][homepage]
+C4 Diagrams:
+![alt text](PMDD_Tracker/Images/Project_1_milestone_C4_Chart.png "C4 Diagram")
 
-[logo]: PMDD_Tracker/Images/HomePageSketch.jpg "Logo Title Text 2"
+

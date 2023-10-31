@@ -530,9 +530,7 @@ body {font-family: Verdana, sans-serif;}
   padding: 5px;
 }
 
-.cardcontainer p {
-  text-align: center;
-}
+
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
