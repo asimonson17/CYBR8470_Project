@@ -57,3 +57,15 @@ As a **abuser**, I want to **be able to see peoples patterns** so I can **use it
 Mitigation criteria Least privileged enfored. Cannot see others data without it being shared with you
 As a **scammer**, I want to **be able to see peoples patterns** so I can **try to get them to buy a fake product for their specific PMDD symptoms**.
 Mitigation criteria user login required to see data with least privilege enfored
+
+## Diagrams - Markup
+
+Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](PMDD_Tracker/Images/HomePageSketch.jpg "Homepage")
+
+Reference-style: 
+![alt text][homepage]
+
+[logo]: PMDD_Tracker/Images/HomePageSketch.jpg "Logo Title Text 2"
