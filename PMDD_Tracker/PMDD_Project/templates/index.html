@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-    <!--Commenting out for testing
-        {% load static %}
-    <link rel="stylesheet" href="{% static '../PMDD_Tracker_static/css/styles.css' %}" /> 
--->
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/homestyle.css' %}" /> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,9 +36,7 @@
             <a href="#"><i class="fa fa-question-circle-o"></i></a>
             <a href="entry.html"><i class="fa fa-pencil-square-o"></i></a>
           </div>
-  <!-- Commenting out for testing
-    <a href="{% url 'trackingcalenar' %}">Tracking Calendar</a>
--->
+
         <div class="content">
 
             <div class="whatispmdd">

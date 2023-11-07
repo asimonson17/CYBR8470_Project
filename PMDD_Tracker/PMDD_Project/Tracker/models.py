@@ -5,6 +5,41 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class PMDD(models.Model):
     name = models.CharField(max_length=30, null=True, blank=False)
+
   
+    def __str__(self):
+        return str(self.id) + " - " + self.name  
+
+class User(models.Model):
+    name = models.CharField(max_length=30, null=True, blank=False)
+    age = models.IntegerField(validators=[
+            MinValueValidator(0),
+            MaxValueValidator(99)], null=True, blank=False)
+    periodtype = models.CharField(max_length=30, null=True, blank=False)
+
+      
+    def __str__(self):
+        return str(self.id) + " - " + self.name  
+
+class Tracker(models.Model):
+    name = models.CharField(max_length=30, null=True, blank=False)
+    date = models.IntegerField(validators=[
+            MinValueValidator(0),
+            MaxValueValidator(99)], null=True, blank=False)
+    periodtype = models.CharField(max_length=30, null=True, blank=False)
+    anger = models.IntegerField(validators=[
+            MinValueValidator(1),
+            MaxValueValidator(10)])
+    sadness = models.IntegerField(validators=[
+            MinValueValidator(1),
+            MaxValueValidator(10)])
+    happiness = models.IntegerField(validators=[
+            MinValueValidator(1),
+            MaxValueValidator(10)])
+    lonliness = models.IntegerField(validators=[
+            MinValueValidator(1),
+            MaxValueValidator(10)])
+
+      
     def __str__(self):
         return str(self.id) + " - " + self.name  
