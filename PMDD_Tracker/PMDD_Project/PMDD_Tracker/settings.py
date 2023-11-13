@@ -74,7 +74,7 @@ TEMPLATES = [
 
 STATICFILES_DIRS = [
     # ...
-    ("styles", "../static/basefiles"),
+    ("styles", os.path.join(BASE_DIR, 'static/basefiles/')),
 ]
 
 WSGI_APPLICATION = 'PMDD_Tracker.wsgi.application'
