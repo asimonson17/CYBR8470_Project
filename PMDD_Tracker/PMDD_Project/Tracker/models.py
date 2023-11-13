@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 # Value Validatators to check integer values for input validation
 # Create your models here.
 
-class PMDD(models.Model):
+class PMDDf(models.Model):
     name = models.CharField(max_length=30, null=True, blank=False)
 
   
@@ -36,7 +36,7 @@ class Tracker(models.Model):
     happiness = models.IntegerField(validators=[
             MinValueValidator(1),
             MaxValueValidator(10)])
-    lonliness = models.IntegerField(validators=[
+    loneliness = models.IntegerField(validators=[
             MinValueValidator(1),
             MaxValueValidator(10)])
 

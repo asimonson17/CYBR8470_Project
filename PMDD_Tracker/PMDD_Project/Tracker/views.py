@@ -14,5 +14,12 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, "index.html")
-    
 
+    # can pass context in with render. Look at jquery over render
+    
+class TrackerViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing dog instances.
+    """
+    serializer_class = TrackerSerializer
+    queryset = Tracker.objects.all()

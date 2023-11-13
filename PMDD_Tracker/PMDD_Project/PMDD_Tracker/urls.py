@@ -12,6 +12,8 @@ router = routers.SimpleRouter()
 #router.register(r'user', views.UserViewSet, basename='User')
 
 
+router.register(r'Tracker', views.TrackerViewSet, basename='tracker')
+
 urlpatterns = [
 
     path('admin/', admin.site.urls),
@@ -20,3 +22,6 @@ urlpatterns = [
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
+
+
+#django forms or javascript to call api like we did with postman - jquery - to call data. django templating syntax 

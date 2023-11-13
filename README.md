@@ -45,9 +45,13 @@ SOFTWARE.
 
 ## User Stories
 As a **parent**, I want to **be able to see my families calendar at a quick glance** so I can **prepare for the day**.
+Acceptance Criteria - A share calendar option exists
 As a **friend**, I want to **be able to see my friends shared notes** so I can **be there for them the day they're not feeling well**.
+Acceptance Criteria - a share notes option exists
 As a **woman**, I want to **be able to notate my moods in an easy way via pictures** so I can **documtent my moods quickly and efficiently**.
+Acceptance Criteria - emojis exist in calendar to quickly notate moods
 As a **user**, I want to **be able to see if I have PMDD with a quick test** so I can **get proper medical care**.
+Acceptance Criteria - a test link exists to check for PMDD
 
 ## Mis-use Stories
 As a **malicious user**, I want to **be able to see other users notes** so I can **use their informaiton in a malicious way**.
