@@ -1,3 +1,14 @@
+function escape(htmlStr) {
+  return htmlStr.replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");        
+
+}
+
+console.log(escape("<script>alert('hi')</script>"));
+
 const date = new Date();
 
 const renderCalendar = () => {

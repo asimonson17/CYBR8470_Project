@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  html{
+    font-size: 62.5%;
+    min-height: 100% !important;
+    height: 100%;
+  }
+  
+  .header {
+  
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* background-image: url("AlexDrawingSmall.jpg"); */
+  
+  }
+  
+  .header h1 {
+  
+    padding-top: 10px;
+    justify-content: center;
+    display: flex;
+    font-weight: 400;
+    text-align: center;
+    color: #222227;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+  
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  .content {
+  /*  margin-left: 200px; */
+    margin-top: 100px;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .container {
+    margin-left: 200px;
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    color: black;
+    display: flex;
+  
+  }
+
+  /* The side navigation menu */
+.sidebar {
+    margin-top: 0px;
+    padding: 0;
+    width: 200px;
+    margin-top: 50px;
+    background-color:#555;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 125%;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #447480;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {
+      float: left;
+    }
+    div.content {
+      margin-left: 0;
+    }
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  
+.icon-bar {
+  position: fixed;
+  left: 0;
+  color: #262626;
+  width: 100%; /* Full-width */
+  height: 50px;
+  background-color: #555; /* Dark-grey background */
+  overflow: auto; /* Overflow due to float */
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 2px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  height: 50px;
+  font-size: 1.4vw; /* Increased font size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.icon-bar a.active {
+  background-color: #04AA6D; /* Add an active/current color */
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .icon-bar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .icon-bar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .icon-bar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.form {
+  /* Center the form on the page */
+  margin-left: 100%;
+  width: 500px;
+  justify-content: center;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+
+}
+
+.form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form li + li {
+  margin-top: 3em;
+}
+
+.form label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+}
+
+.form input,
+.form textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+
+  /* Uniform text field size */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Match form field borders */
+  border: 1px solid #999;
+}
+
+.form input:focus,
+.form textarea:focus {
+  /* Additional highlight for focused elements */
+  border-color: #000;
+}
+
+.formtextarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: 0.5em;
+}
+
+
+.moodtracker h1 {
+  font-weight: 400;
+  color: #222227;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+}

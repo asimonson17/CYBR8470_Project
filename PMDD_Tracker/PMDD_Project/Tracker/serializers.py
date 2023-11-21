@@ -11,7 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
 class TrackerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tracker
-        fields = ['name', 'date', 'periodtype', 'anger', 'sadness', 'happiness', 'loneliness']
+        fields = ['firstname', 'lastname', 'date', 'periodflow', 'irritation', 'sadness', 'happiness', 'loneliness']
 
 
 #class PMDDSerializer(serializers.ModelSerializer):

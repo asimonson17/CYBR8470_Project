@@ -3,7 +3,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 # Value Validatators to check integer values for input validation
 # Create your models here.
 
-class PMDDf(models.Model):
+class PMDD(models.Model):
     name = models.CharField(max_length=30, null=True, blank=False)
 
   
@@ -22,12 +22,13 @@ class User(models.Model):
         return str(self.id) + " - " + self.name  
 
 class Tracker(models.Model):
-    name = models.CharField(max_length=30, null=True, blank=False)
+    firstname = models.CharField(max_length=30, null=True, blank=False)
+    lastname = models.CharField(max_length=30, null=True, blank=False)
     date = models.IntegerField(validators=[
             MinValueValidator(0),
-            MaxValueValidator(99)], null=True, blank=False)
-    periodtype = models.CharField(max_length=30, null=True, blank=False)
-    anger = models.IntegerField(validators=[
+            MaxValueValidator(1000000)], null=True, blank=False)
+    periodflow = models.CharField(max_length=30, null=True, blank=False)
+    irritation = models.IntegerField(validators=[
             MinValueValidator(1),
             MaxValueValidator(10)])
     sadness = models.IntegerField(validators=[

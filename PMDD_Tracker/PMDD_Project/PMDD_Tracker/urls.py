@@ -18,6 +18,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path("addentry", views.addentry, name="addentry"),
     re_path(r"^$", views.index, name="index"),
 ]
 
