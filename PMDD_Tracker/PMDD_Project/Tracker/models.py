@@ -1,5 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+import datetime
+from django.core.exceptions import ValidationError
 # Value Validatators to check integer values for input validation
 # Create your models here.
 
@@ -24,9 +26,10 @@ class User(models.Model):
 class Tracker(models.Model):
     firstname = models.CharField(max_length=30, null=True, blank=False)
     lastname = models.CharField(max_length=30, null=True, blank=False)
-    date = models.IntegerField(validators=[
-            MinValueValidator(0),
-            MaxValueValidator(1000000)], null=True, blank=False)
+    date = models.DateField(default=datetime.date.today())
+#    (validators=[
+#           MinValueValidator(0),
+#            MaxValueValidator(1000000)], null=True, blank=False)
     periodflow = models.CharField(max_length=30, null=True, blank=False)
     irritation = models.IntegerField(validators=[
             MinValueValidator(1),

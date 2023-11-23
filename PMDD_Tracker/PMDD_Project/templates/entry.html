@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-    <!--Commenting out for testing
-        {% load static %}
-    <link rel="stylesheet" href="{% static '../PMDD_Tracker_static/css/styles.css' %}" /> 
--->
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'styles/form.css' %}" /> 
@@ -13,13 +9,12 @@
   <title>Calendar</title>
   <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         function submitentry(){
+        //define variables for the submit button in addentry form. #fname comes from the id of the tag in the form below. 0 is the array and .value is saying to grab the value for that variable in that array place.
             let fname = $("#fname")[0].value 
             let lname = $("#lname")[0].value 
             let entrydate = $("#entrydate")[0].value 
@@ -28,13 +23,18 @@
             let sad = $("#sad")[0].value 
             let happy = $("#happy")[0].value 
             let lonely = $("#lonely")[0].value 
+            //log the variables above to the console to see if they are posting or being grabbed
             console.log(fname, lname, entrydate, period, irritability, sad, happy, lonely)
             console.log("submitted")
-//            console.log($("#fname")[0].value)
+            //console.log($("#fname")[0].value)
+            //Post to api/Tracker viewset. Model name first, name from variables above second. Modelname:Variblename
             $.post( "../api/Tracker/", { firstname:fname, lastname:lname, date:entrydate, periodflow:period, irritation:irritability, sadness:sad, happiness:happy, loneliness:lonely } );
         }
     </script>
 </head>
+{% autoescape on %}
+    {{ body }}
+{% endautoescape %}
 <body>
     <div class="content">
         <div class="header">
