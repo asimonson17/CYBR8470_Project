@@ -23,6 +23,9 @@ def addentry(request):
 
     # can pass context in with render. Look at jquery over render
 
+def calendar(request):
+    return render(request, "calendar.html")
+
 class TrackerViewSet(viewsets.ModelViewSet):
     """
     A viewset for viewing and editing dog instances.

@@ -19,6 +19,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path("addentry", views.addentry, name="addentry"),
+    path("calendar", views.calendar, name="calendar"),
     re_path(r"^$", views.index, name="index"),
 ]
 
