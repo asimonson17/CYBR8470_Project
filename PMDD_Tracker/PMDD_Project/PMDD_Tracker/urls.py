@@ -20,6 +20,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path("addentry", views.addentry, name="addentry"),
     path("calendar", views.calendar, name="calendar"),
+    path("accounts/", include("django.contrib.auth.urls")), 
     re_path(r"^$", views.index, name="index"),
 ]
 
