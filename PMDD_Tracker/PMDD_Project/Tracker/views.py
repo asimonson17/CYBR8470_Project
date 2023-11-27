@@ -16,6 +16,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.forms import Form
+from .forms import RegisterForm
 
 
 def index(request):
@@ -33,14 +35,15 @@ def calendar(request):
 
 
 def registeruser(response):
+    form=Form()
     if response.method == "POST":
 	    form = Form(response.POST)
     if form.is_valid():
 	    form.save()
-	    return redirect("/home")
+	    return redirect("index.html")
     else:
 	    form = RegisterForm()
-    return render(response, "register.html", {"form":form})    
+    return render(response, "registeruser.html", {"form":form})    
 
 def custom_logout(request):
     logout(request)
