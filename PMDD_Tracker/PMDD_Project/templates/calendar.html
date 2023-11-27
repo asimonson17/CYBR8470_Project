@@ -64,6 +64,18 @@
      <div class="overview">
       <h1>Overview</h1>
       <p>Monthly Overview will go here</p>
+      <button type="button" id="share" onclick="shareCalendar()">Share Calendar</button>
+      <script>
+      function shareCalendar() {
+        var link = "mailto:alexsimontest@outlook.com"
+                 + "?cc=myCCaddress@example.com"
+                 + "&subject=" + encodeURIComponent("User is Sharing Their PMDD Calendar")
+                 + "&body=" + encodeURIComponent("Sharing calendar test")
+        ;
+        
+        window.location.href = link;
+    }
+      </script>
       <canvas id="myChart" style="width:100%;max-height:80%"></canvas>
      </div>
 
