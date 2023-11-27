@@ -41,17 +41,17 @@
           <h1>PMDD Tracker</h1>
         </div>  
         <div class="sidebar">
-            <a href="index.html">Home</a>
-            <a href="calendar.html">Tracking Calendar</a>
-            <a class="active" href="entry.html">Add Entry</a> 
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'calendar' %}">Tracking Calendar</a>
+            <a class="active" href="{% url 'addentry' %}">Add Entry</a> 
             <a href="#links">Links</a>
         </div>
         <div class="icon-bar">
-            <a href="index.html"><i class="fa fa-home"></i></a>
+            <a href="{% url 'index' %}"><i class="fa fa-home"></i></a>
             <a href="#"><i class="fa fa-search"></i></a>
             <a href="#"><i class="fa fa-user-circle"></i></a>
             <a href="#"><i class="fa fa-question-circle-o"></i></a>
-            <a href="entry.html"><i class="fa fa-pencil-square-o"></i></a>
+            <a href="{% url 'addentry' %}"><i class="fa fa-pencil-square-o"></i></a>
           </div>
           {% comment %} Commenting out for testing
     <a href="{% url 'trackingcalenar' %}">Tracking Calendar</a>
