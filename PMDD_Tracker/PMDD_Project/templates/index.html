@@ -1,3 +1,14 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+
 <!DOCTYPE html>
 
     {% load static %}
@@ -32,7 +43,16 @@
         <div class="icon-bar">
             <a class="active" href="{% url 'index' %}"><i class="fa fa-home"></i></a>
             <a href="#"><i class="fa fa-search"></i></a>
-            <a href="#"><i class="fa fa-user-circle"></i></a>
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'logout' %}">
+            Log out <i class="fas fa-sign-out-alt"></i>
+            </a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'login' %}">
+            Log in <i class="fas fa-sign-in-alt"></i>
+            </a>
+
+            {% endif %}
             <a href="#"><i class="fa fa-question-circle-o"></i></a>
             <a href="{% url 'addentry' %}"><i class="fa fa-pencil-square-o"></i></a>
           </div>
@@ -81,3 +101,4 @@
         </div>
     </div>
 </body>
+{% endblock %}

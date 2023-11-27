@@ -13,13 +13,11 @@ class PMDD(models.Model):
         return str(self.id) + " - " + self.name  
 
 class User(models.Model):
-    name = models.CharField(max_length=30, null=True, blank=False)
-    age = models.IntegerField(validators=[
-            MinValueValidator(0),
-            MaxValueValidator(99)], null=True, blank=False)
-    periodtype = models.CharField(max_length=30, null=True, blank=False)
-
-      
+    username = models.CharField(max_length=30, null=True, blank=False)
+    email = models.CharField(max_length=30, null=True, blank=False)
+    password1 = models.CharField(max_length=30, null=True, blank=False)
+    password2 = models.CharField(max_length=30, null=True, blank=False)
+  
     def __str__(self):
         return str(self.id) + " - " + self.name  
 
