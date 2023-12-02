@@ -2,6 +2,7 @@ from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 import datetime
 from django.core.exceptions import ValidationError
+from django.contrib.auth.models import AnonymousUser
 # Value Validatators to check integer values for input validation
 # Create your models here.
 
@@ -12,6 +13,7 @@ class PMDD(models.Model):
     def __str__(self):
         return str(self.id) + " - " + self.name  
 
+""" Commeting out for testing
 class User(models.Model):
     username = models.CharField(max_length=30, null=True, blank=False)
     email = models.CharField(max_length=30, null=True, blank=False)
@@ -20,6 +22,7 @@ class User(models.Model):
   
     def __str__(self):
         return str(self.id) + " - " + self.name  
+"""
 
 class Tracker(models.Model):
     firstname = models.CharField(max_length=30, null=True, blank=False)

@@ -13,7 +13,7 @@ router = routers.SimpleRouter()
 
 
 router.register(r'Tracker', views.TrackerViewSet, basename='tracker')
-router.register(r'User', views.UserViewSet, basename='user')
+#router.register(r'User', views.UserViewSet, basename='user')
 
 urlpatterns = [
 
@@ -22,7 +22,7 @@ urlpatterns = [
     path("addentry", views.addentry, name="addentry"),
     path("calendar", views.calendar, name="calendar"),
     path("accounts/", include("django.contrib.auth.urls")), 
-   path("registeruser", views.registeruser, name="registeruser"),
+    path("registeruser", views.registeruser, name="registeruser"),
     path('login', views.custom_login, name='login'),
     path('logout', views.custom_logout, name='logout'),
     re_path(r"^$", views.index, name="index"),
@@ -31,4 +31,4 @@ urlpatterns = [
 urlpatterns = format_suffix_patterns(urlpatterns)
 
 
-#django forms or javascript to call api like we did with postman - jquery - to call data. django templating syntax 
+ 

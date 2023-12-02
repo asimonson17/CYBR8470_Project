@@ -1,16 +1,16 @@
 from rest_framework import serializers
-from Tracker.models import User, Tracker #, LANGUAGE_CHOICES, STYLE_CHOICES
+from Tracker.models import Tracker#, User LANGUAGE_CHOICES, STYLE_CHOICES
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 
-class UserSerializer(serializers.ModelSerializer):    
-    email = forms.EmailField()
-    class Meta:
-	    model = User
-	    fields = ["username", "email", "password1", "password2"]
+#class UserSerializer(serializers.ModelSerializer):    
+#    email = forms.EmailField()
+#    class Meta:
+#	    model = User
+#	    fields = ["username", "email", "password1", "password2"]
 
 class TrackerSerializer(serializers.ModelSerializer):
     class Meta:
