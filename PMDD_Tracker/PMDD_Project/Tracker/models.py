@@ -25,6 +25,7 @@ class User(models.Model):
 """
 
 class Tracker(models.Model):
+        # user = models.Foreignkey
     firstname = models.CharField(max_length=30, null=True, blank=False)
     lastname = models.CharField(max_length=30, null=True, blank=False)
     date = models.DateField(default=datetime.date.today())

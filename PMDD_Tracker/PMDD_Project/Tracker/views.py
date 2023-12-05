@@ -119,6 +119,13 @@ class TrackerViewSet(viewsets.ModelViewSet):
     serializer_class = TrackerSerializer
     queryset = Tracker.objects.all()
 
+    def get_queryset(self):
+        currentuser = self.request.user
+        print(currentuser)
+        if self.request.user:
+            return Tracker.objects.filter(firstname=currentuser.first_name)
+        return None
+
 """ commmenting out for testing
 class UserViewSet(viewsets.ModelViewSet):
     

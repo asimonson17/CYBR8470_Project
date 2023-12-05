@@ -7,7 +7,7 @@ from django.urls import include, re_path
 from django.contrib.auth import views as auth_views
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
-
+#allows you to set it to login required. 
 
 router = routers.SimpleRouter()
 

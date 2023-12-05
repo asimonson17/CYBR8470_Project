@@ -15,6 +15,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% comment %} {% load static %}
 <script src="{% static 'styles/scriptnew.js' %}"></script> {% endcomment %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+      async function getentry(){
+      //define variables for the submit button in addentry form. #fname comes from the id of the tag in the form below. 0 is the array and .value is saying to grab the value for that variable in that array place.
+          let entries = await $.get("../api/Tracker")
+          console.log(entries)
+          entries.forEach(entry => {
+            $('#mynotes .notescontainer').append(
+            '<div class="card"><h2>&#128544;</h2><div class=\"cardcontainer\"><p><b>Date:'+entry.date+'</b></p><p>Period?:'+entry.periodflow+'</p><p>Happinesslevel:>'+entry.happiness+'</p></div></div>'
+            )  
+          });
+          
+          
+          // <p>Irritability:</p>
+          // <p>Sad Level:</p>
+          // <p>Happiness Level:</p>
+          // <p>Lonliness Level:</p>
+          // let fname = $("#fname")[0].value 
+          // let lname = $("#lname")[0].value 
+          // let entrydate = $("#entrydate")[0].value 
+          // let period = $("#period")[0].value 
+          // let irritability = $("#irritability")[0].value 
+          // let sad = $("#sad")[0].value 
+          // let happy = $("#happy")[0].value 
+          // let lonely = $("#lonely")[0].value 
+          // //log the variables above to the console to see if they are posting or being grabbed
+          // console.log(fname, lname, entrydate, period, irritability, sad, happy, lonely)
+          // console.log("submitted")
+          //console.log($("#fname")[0].value)
+          //Post to api/Tracker viewset. Model name first, name from variables above second. Modelname:Variblename
+      }
+      getentry()
+  </script>
 </head>
 <body>
   
@@ -87,121 +120,10 @@
       </script>
       <canvas id="myChart" style="width:100%;max-height:80%"></canvas>
      </div>
-
-    <div class="notes">
+    <div id="mynotes" class="notes">
       <h1>My Notes</h1>
       <p>My Notes go here</p>
       <div class="notescontainer">
-      <div class="card">
-        <h2>&#128512;</h2> <!--Happy Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-        </div>
-      </div>
-      <p></p>
-      <div class="card">
-        <h2>&#128546;</h2> <!--Crying Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>
-      <p></p>
-      <div class="card">
-        <h2>&#128544;</h2> <!--Angry Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>
-      <p></p>
-      <div class="card">
-        <h2>&#128544;</h2> <!--Angry Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>   
-      <p></p>
-      <div class="card">
-        <h2>&#128544;</h2> <!--Angry Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>   
-      <p></p>
-      <div class="card">
-        <h2>&#128544;</h2> <!--Angry Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>   
-      <p></p>
-      <div class="card">
-        <h2>&#128544;</h2> <!--Angry Face Emoji-->
-        <div class="cardcontainer">
-          <p><b>Date</b></p>
-          <p>Happiness Level:</p>
-          <p>Anger Level:</p>
-          <p>Sad Level:</p>
-          <p>Lonliness Level:</p>
-          <p>Munchies?:</p>
-          <p>Period?:</p>
-          <p>Period Flow:</p>
-          <p>Cramps?:</p>
-
-        </div>
-      </div>   
      </div> 
     </div>
    </div> <!--This is the end of the container wrapper-->
