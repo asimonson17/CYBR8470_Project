@@ -123,7 +123,7 @@ class TrackerViewSet(viewsets.ModelViewSet):
         currentuser = self.request.user
         print(currentuser)
         if self.request.user:
-            return Tracker.objects.filter(firstname=currentuser.first_name)
+            return Tracker.objects.filter(user=currentuser.user)
         return None
 
 """ commmenting out for testing
