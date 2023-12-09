@@ -5,7 +5,7 @@ from rest_framework import viewsets, filters, parsers, renderers
 # from rest_framework.response import Response
 # from rest_framework import status
 from django.contrib.auth import authenticate, login, logout
-from .models import Tracker#, User
+from .models import Tracker, User
 from django.shortcuts import redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required

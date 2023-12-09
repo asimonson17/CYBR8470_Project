@@ -14,26 +14,18 @@ class PMDD(models.Model):
     def __str__(self):
         return str(self.id) + " - " + self.name  
 
-""" Commeting out for testing
 class User(models.Model):
-    username = models.CharField(max_length=30, null=True, blank=False)
-    email = models.CharField(max_length=30, null=True, blank=False)
-    password1 = models.CharField(max_length=30, null=True, blank=False)
-    password2 = models.CharField(max_length=30, null=True, blank=False)
-  
-    def __str__(self):
-        return str(self.id) + " - " + self.name  
-"""
-user = get_user_model()
-
-class Tracker(models.Model):
-    user = models.ForeignKey(user, on_delete=models.CASCADE)
     firstname = models.CharField(max_length=30, null=True, blank=False)
     lastname = models.CharField(max_length=30, null=True, blank=False)
+        
+    def __str__(self):
+        return str(self.id) + " - " + self.name       
+
+class Tracker(models.Model):
+
     date = models.DateField(default=datetime.date.today())
-#    (validators=[
-#           MinValueValidator(0),
-#            MaxValueValidator(1000000)], null=True, blank=False)
+    user = models.ForeignKey("User", null=False, on_delete=models.CASCADE,
+        )
     periodflow = models.CharField(max_length=30, null=True, blank=False)
     irritation = models.IntegerField(validators=[
             MinValueValidator(1),
@@ -51,3 +43,5 @@ class Tracker(models.Model):
       
     def __str__(self):
         return str(self.id) + " - " + self.name  
+
+        
