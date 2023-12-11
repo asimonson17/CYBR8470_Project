@@ -14,18 +14,14 @@ class PMDD(models.Model):
     def __str__(self):
         return str(self.id) + " - " + self.name  
 
-class User(models.Model):
-    firstname = models.CharField(max_length=30, null=True, blank=False)
-    lastname = models.CharField(max_length=30, null=True, blank=False)
-        
-    def __str__(self):
-        return str(self.id) + " - " + self.name       
+
 
 class Tracker(models.Model):
-
+    firstname = models.CharField(max_length=30, null=True, blank=False)
+    lastname = models.CharField(max_length=30, null=True, blank=False)
     date = models.DateField(default=datetime.date.today())
-    user = models.ForeignKey("User", null=False, on_delete=models.CASCADE,
-        )
+#     user = models.ForeignKey("User", null=False, on_delete=models.CASCADE,
+#         )
     periodflow = models.CharField(max_length=30, null=True, blank=False)
     irritation = models.IntegerField(validators=[
             MinValueValidator(1),

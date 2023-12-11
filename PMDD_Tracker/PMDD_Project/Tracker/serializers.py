@@ -15,12 +15,12 @@ from django.contrib.auth.models import User
 class TrackerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tracker
-        fields = ['id', 'user', 'date', 'periodflow', 'irritation', 'sadness', 'happiness', 'loneliness']
+        fields = ['id', 'firstname', 'lastname', 'date', 'periodflow', 'irritation', 'sadness', 'happiness', 'loneliness']
 
-class UserSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ['id', 'firstname', 'lastname']
+# class UserSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = User
+#         fields = ['id', 'firstname', 'lastname']
 
 # Moved this to forms.py. Keeping here just in case
 #class RegisterForm(UserCreationForm):

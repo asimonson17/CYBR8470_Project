@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 
+
 class RegisterForm(UserCreationForm):
     email = forms.EmailField()
 
@@ -11,10 +12,10 @@ class RegisterForm(UserCreationForm):
 	    model = User
 	    fields = ["username", "email", "password1", "password2"]
 
-    def clean(self):
-        cleaned_data = super().clean() 
-        username_clean(self)
-        email_clean(self)
+    # def clean(self):
+    #     cleaned_data = super().clean() 
+    #     username_clean(self)
+    #     email_clean(self)
 
 
     def username_clean(self):  
