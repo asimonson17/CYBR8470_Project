@@ -1,8 +1,10 @@
 from django.contrib import admin
-from Tracker.models import Tracker
+from .models import Tracker
+
 
 
 class TrackerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'firstname', 'lastname', 'date', 'periodflow', 'irritation', 'sadness', 'happiness', 'loneliness')  # 'name' used in list
     pass
 
 class UserAdmin(admin.ModelAdmin):

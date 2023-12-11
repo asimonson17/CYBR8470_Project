@@ -2,12 +2,13 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'styles/form.css' %}" /> 
+
+<html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar</title>
-  <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +16,8 @@
     <script>
         function submitentry(){
         //define variables for the submit button in addentry form. #fname comes from the id of the tag in the form below. 0 is the array and .value is saying to grab the value for that variable in that array place.
-            // let fname = $("#fname")[0].value 
-            // let lname = $("#lname")[0].value 
+            let fname = $("#fname")[0].value 
+            let lname = $("#lname")[0].value 
             let entrydate = $("#entrydate")[0].value 
             let period = $("#period")[0].value 
             let irritability = $("#irritability")[0].value 
@@ -24,11 +25,11 @@
             let happy = $("#happy")[0].value 
             let lonely = $("#lonely")[0].value 
             //log the variables above to the console to see if they are posting or being grabbed
-            console.log(entrydate, period, irritability, sad, happy, lonely)
+            console.log(fname, lname, entrydate, period, irritability, sad, happy, lonely)
             console.log("submitted")
             //console.log($("#fname")[0].value)
             //Post to api/Tracker viewset. Model name first, name from variables above second. Modelname:Variblename
-            $.post( "../api/Tracker/", { date:entrydate, periodflow:period, irritation:irritability, sadness:sad, happiness:happy, loneliness:lonely } );
+            $.post( "../api/Tracker/", { firstname:fname, lastname:lname, date:entrydate, periodflow:period, irritation:irritability, sadness:sad, happiness:happy, loneliness:lonely } );
         }
     </script>
 </head>
@@ -69,14 +70,14 @@
             <form method="post">
             {% csrf_token %}  
             <ul>
-                <!-- <li>
+                <li>
                     <label for="fname">First name:</label>
                     <input type="text" id="fname" name="fname">
                 </li>
                 <li>
                     <label for="lname">Last name:</label>
                     <input type="text" id="lname" name="lname">
-                </li> -->
+                </li>
                 <li>
                     <label for="date">Today's Date:</label>
                     <input type="text" id="entrydate" name="date">
@@ -111,3 +112,4 @@
 </div>
     </div>
 </body>
+</html>
