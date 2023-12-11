@@ -42,7 +42,7 @@ html{
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 .container {
   /*  margin-left: 200px; */
-    margin-top: 60px;
+    margin-top: 20px;
     height: 100%;
     background-color: #ffffff;
   }
@@ -63,6 +63,9 @@ html{
   font-size: 30px;
 }
 
+.whatispmdd {
+  padding-top: 50px;
+}
 .content h4 {
   font-size: 20px;
 }
@@ -76,6 +79,11 @@ html{
 }
 
 .treatmentlist {
+  font-size: 15px;
+  padding-left: 25px;
+}
+
+.linklist {
   font-size: 15px;
   padding-left: 25px;
 }
@@ -146,6 +154,7 @@ html{
     }
   }
   
+
   
 .icon-bar {
   position: fixed;
@@ -156,7 +165,7 @@ html{
   padding-bottom: 50px;
   margin-bottom: 100px;
   background-color: #555; /* Dark-grey background */
-  overflow: auto; /* Overflow due to float */
+
 }
 
 .icon-bar a {
