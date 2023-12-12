@@ -73,8 +73,10 @@ html{
 
 .notescontainer {
   display:flex;
+  width: 700px;
   overflow: auto;
   height: 80%;
+
 }
 
 .notes h1 {
