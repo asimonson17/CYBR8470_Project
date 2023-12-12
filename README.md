@@ -44,14 +44,25 @@ SOFTWARE.
 ## Docs
 
 ## User Stories
+<!-- 
+Changed user stories to be more realistic. 
 As a **parent**, I want to **be able to see my families calendar at a quick glance** so I can **prepare for the day**.
 Acceptance Criteria - A share calendar option exists
 As a **friend**, I want to **be able to see my friends shared notes** so I can **be there for them the day they're not feeling well**.
 Acceptance Criteria - a share notes option exists
 As a **woman**, I want to **be able to notate my moods in an easy way via pictures** so I can **documtent my moods quickly and efficiently**.
 Acceptance Criteria - emojis exist in calendar to quickly notate moods
-As a **user**, I want to **be able to see if I have PMDD with a quick test** so I can **get proper medical care**.
+As a **user**, I want to **be able to see if I have PMDD with a quick test** so I can **get proper medical care**. -->
+As a **user**, I want an **add entry feature** so I can **log my days** in a tracker.
+Acceptance Criteria - An add entry button exists.
+As a **user**, I want to be able to **see my notes at a quick glance** so that I **can see patterns**.
+Acceptance Criteria - A notes view with cards exists on the tracker page
+As a **user**, I want to be able to **create** an account so I can privately **track my information**. 
+Acceptance Criteria - A registration button exists.
+As a **woman**, I want to be able to **notate my moods in an easy way via pictures** so I can **document my moods quickly and efficiently**.
+As a **user**, I want to be able to **see if I have PMDD with a quick test** so I can get **proper medial care**.
 Acceptance Criteria - a test link exists to check for PMDD
+
 
 ## Mis-use Stories
 As a **malicious user**, I want to **be able to see other users notes** so I can **use their informaiton in a malicious way**.
